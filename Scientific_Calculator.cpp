@@ -89,7 +89,15 @@ class Power
     }
     void showPow()
     {
-        for(i=1 ; i<=b ; i++)
+        if(b < 0)
+        {
+            for(i=1; i<=-b; i++)
+            {
+                c /= a;
+            }
+            cout<<"\nAnswer = "<<c;
+        }
+        for(i=1 ; i<=b ; i++)   //this for loop basically multiply my "a" value "b" times
         {
             c=c*a;
         }
@@ -115,7 +123,12 @@ class Factorial
             cout<<"Error: Non Integer Input";
             return 0;
         }
-        for(i=1; i<=a; i++)
+        if(b < 0)
+        {
+            cout<<"Error: Negative Number Input";
+            return 0;
+        }
+        for(i=1; i<=a; i++) //this for loop basically multiply 1 to a terms of nos. and store it on f.
         {
             f = f*i;
         }
@@ -164,7 +177,7 @@ class SQRTT
     }
     void showRT()
     {
-        b=sqrt(a);
+        b=sqrt(a);  //this sqrt function is used to find square root of any nos. It is available in "math.h" library file.
         cout<<"\nAnswer = "<<b;
     }
 };
